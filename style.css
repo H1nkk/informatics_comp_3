@@ -22,15 +22,29 @@ body {
     left: 0;
     padding: 100vh 0;
 }
+
 .parallax_layer-back {
-    transform: translateZ(0);
+    transform: translateZ(-2px);
 }
-.parallax_layer-front {
+
+.parallax_layer-mid {
     transform: translateZ(-1px);
+
 }
+
+.parallax_layer-front {
+    transform: translateZ(0);
+    background-image: url(src/testt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+}
+
+
 
 .title {
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
 }
