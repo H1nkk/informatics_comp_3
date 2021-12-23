@@ -4,7 +4,15 @@
 }
 
 body {
-    background-color: rgb(110, 110, 110);
+    font: 20px "Arial";
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .parallax {
@@ -14,35 +22,69 @@ body {
     overflow-y: auto;
     font-size: 200%;
 }
+
 .parallax_layer {
     position: absolute;
     top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    padding: 100vh 0;
+    right: 0;
 }
+
+.parallax_layer-deepbg {
+    transform: translateZ(-3px) scale(4);
+    background-color: rgb(22, 0, 119)
+}
+
 
 .parallax_layer-back {
-    transform: translateZ(-2px);
+    transform: translateZ(-1px) scale(2);
 }
 
-.parallax_layer-mid {
-    transform: translateZ(-1px);
-
-}
-
-.parallax_layer-front {
+.parallax_layer-base {
     transform: translateZ(0);
-    background-image: url(src/testt.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: visible;
 }
 
-.title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.firstgroup {
+    z-index: 3;
+}
+
+.almostmiddlegroup {
+    z-index: 2;
+}
+
+.middlegroup {
+    z-index: 4;
+}
+
+.almostlast {
+    background-color: transparent;
+    z-index: 3;
+}
+
+.last {
+    background-color: royalblue;
+    z-index: 3;
+}
+
+#a7 {
+    background-color: none;
+}
+
+#a1 {
+    background-color: rgb(2, 141, 2);
+}
+
+#b3 {
+    background-color: rgb(134, 132, 0);
+}
+
+#midbase {
+    background-color: hsla(155, 100%, 26%, 0.2);
 }
