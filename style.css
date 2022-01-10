@@ -5,6 +5,7 @@
 
 body {
     font: 20px "Arial";
+    background-color: rgb(3, 3, 31);
 }
 
 .title {
@@ -13,6 +14,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding: 60px;
+    border: 1px black solid;
 }
 
 .parallax {
@@ -35,7 +38,6 @@ body {
     transform: translateZ(-3px) scale(4);
     background-color: rgb(22, 0, 119)
 }
-
 
 .parallax_layer-back {
     transform: translateZ(-1px) scale(2);
@@ -73,7 +75,7 @@ body {
     z-index: 3;
 }
 
-#a1 {
+#midbase {
     background-color: rgb(2, 141, 2);
 }
 
@@ -81,6 +83,75 @@ body {
     background-color: rgb(134, 132, 0);
 }
 
-#midbase {
-    background-color: hsla(155, 100%, 26%, 0.2);
+#s11, #s13, #s15 {
+    padding: 60px;
+    border: 1px solid black;
+    background-color: gold;
+}
+
+#s12, #s14 {
+    padding: 60px;
+    border: 1px solid black;
+}
+
+#s21, #s22 {
+    padding: 80px;
+    border: 1px solid black;
+    background-color: maroon;
+}
+
+#s31 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(29, 29, 29);
+}
+
+.perv#s11, .perv#s13, .perv#s15 {
+    animation: slideinright 1.5s;
+}
+
+.perv#s12, .perv#s14 {
+    animation: slideinleft 1.5s;
+}
+
+.vtor {
+    animation: increaseinsize_andappear 2s ease-out;
+
+}
+
+#s31 {
+    animation: deepbgappearance 2s;
+}
+
+@keyframes slideinright {
+    0% {
+      margin-left: 100%;
+    }
+  
+    100% {
+      margin-left: 0%;
+    }
+}
+
+@keyframes slideinleft {
+    0% {
+        margin-left: -100%;
+      }
+    
+      100% {
+        margin-left: 0%;
+      }
+}
+
+@keyframes increaseinsize_andappear {
+    0% {
+       padding: 0;
+       opacity: 0;
+    }
+
+    100% {
+        padding: 80px;
+        opacity: 1;
+    }
 }
