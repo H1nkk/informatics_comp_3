@@ -120,10 +120,6 @@ body {
 
 }
 
-#s31 {
-    animation: deepbgappearance 2s;
-}
-
 @keyframes slideinright {
     0% {
       margin-left: 100%;
